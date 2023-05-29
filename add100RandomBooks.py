@@ -21,7 +21,7 @@ def getAuthToken():
         raise Exception(f"Status code {r.status_code} and text {r.text}, while trying to Auth.")
 
 def deleteBOok(id):
-    r = requests.get(
+    r = requests.delete(
         f"{APIHOST}/api/v1/books/{id}", 
         headers = {
             "Content-type": "application/json",
